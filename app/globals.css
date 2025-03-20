@@ -1,26 +1,120 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-sub: var(--sub);
+
+  --color-destructive: var(--destructive);
+  --color-muted: var(--muted);
+  --color-secondary: var(--secondary);
+  --color-primary: var(--primary);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --radius: 0.625rem;
+  --background: oklch(14.48% 0 0);
+  --foreground: oklch(94.61% 0 0);
+
+  --primary: oklch(71.95% 0.1513 250.51);
+  --secondary: oklch(73.97% 0.1309 182.72);
+  --muted: oklch(70.58% 0 0 / 10%);
+  --destructive: oklch(54.82% 0.1952 24.96);
+
+  --sub: oklch(70.58% 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+
+  --size-h1: 3.815rem;
+  --size-h2: 3.052rem;
+  --size-h3: 2.441rem;
+  --size-h4: 1.953rem;
+  --size-h5: 1.563rem;
+  --size-h6: 1.25rem;
+  --size-p: 1rem;
+  --size-small: 0.8rem;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --primary: oklch(0.922 0 0);
+  --secondary: oklch(0.269 0 0);
+  --muted: oklch(0.269 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --sub: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+}
+
+@theme {
+  --text-h1: var(--size-h1);
+  --text-h2: var(--size-h2);
+  --text-h3: var(--size-h3);
+  --text-h4: var(--size-h4);
+  --text-h5: var(--size-h5);
+  --text-h6: var(--size-h6);
+  --text-p: var(--size-p);
+  --text-small: var(--size-small);
+}
+
+@layer base {
+  * {
+    @apply border-sub outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground text-sm;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+  h1 {
+    @apply text-h1;
+  }
+  h2 {
+    @apply text-h2;
+  }
+  h3 {
+    @apply text-h3;
+  }
+  h4 {
+    @apply text-h4;
+  }
+  h5 {
+    @apply text-h5;
+  }
+  h6 {
+    @apply text-h6;
+  }
+  p {
+    @apply text-p;
+  }
+  small {
+    @apply text-small;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .flex-center {
+    @apply flex items-center;
+  }
+  .grid-center {
+    @apply grid place-items-center;
+  }
 }
