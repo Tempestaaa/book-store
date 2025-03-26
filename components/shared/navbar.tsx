@@ -37,8 +37,8 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header className="px-2 md:px-4 border-b border-muted">
-      <nav className="h-14 flex-center justify-between container mx-auto relative">
+    <header className="px-2 md:px-4 border-b border-muted fixed top-0 left-0 right-0 z-50 bg-background">
+      <nav className="h-14 flex-center justify-between relative">
         <Sheet>
           <section className="flex-center gap-2">
             <section className="flex-center gap-2">

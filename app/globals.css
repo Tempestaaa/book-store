@@ -34,7 +34,7 @@
   --primary: oklch(71.95% 0.1513 250.51);
   --secondary: oklch(73.97% 0.1309 182.72);
   --muted: oklch(70.58% 0 0 / 10%);
-  --destructive: oklch(54.82% 0.1952 24.96);
+  --destructive: oklch(63.16% 0.2723 24.96);
 
   --sub: oklch(70.58% 0 0);
   --input: oklch(0.922 0 0);
@@ -80,6 +80,11 @@
   }
   body {
     @apply bg-background text-foreground text-sm;
+  }
+  body,
+  html,
+  main {
+    @apply h-full;
   }
   button {
     @apply cursor-pointer;
