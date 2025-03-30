@@ -24,6 +24,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  --font-heading: var(--font-heading);
 }
 
 :root {
@@ -72,6 +74,8 @@
   --text-h6: var(--size-h6);
   --text-p: var(--size-p);
   --text-small: var(--size-small);
+
+  --font-heading: var(--font-heading);
 }
 
 @layer base {
@@ -112,6 +116,14 @@
   }
   small {
     @apply text-small;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
   }
 }
 
