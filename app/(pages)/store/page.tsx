@@ -8,7 +8,7 @@ export default function StorePage() {
     <div className="flex gap-4 h-full">
       <SidebarFilter />
 
-      <ScrollArea className="px-4 space-y-4 flex-1 h-full pr-4">
+      <ScrollArea className="px-4 flex-1 h-full">
         <GridTools />
         <BookGrid />
 

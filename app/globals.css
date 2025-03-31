@@ -14,6 +14,7 @@
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-sub: var(--sub);
+  --color-star: var(--star);
 
   --color-destructive: var(--destructive);
   --color-muted: var(--muted);
@@ -41,6 +42,7 @@
   --sub: oklch(70.58% 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
+  --star: oklch(0.769 0.188 70.08);
 
   --size-h1: 3.815rem;
   --size-h2: 3.052rem;

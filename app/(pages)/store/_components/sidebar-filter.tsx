@@ -1,47 +1,27 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import genres from "@/data/genres";
-import { CheckIcon } from "lucide-react";
+import FilterByGenre from "@/app/(pages)/store/_components/filter-by-genre";
+import FilterByPrice from "@/app/(pages)/store/_components/filter-by-price";
+import FilterByRating from "@/app/(pages)/store/_components/filter-by-rating";
+import { Accordion } from "@/components/ui/accordion";
+import { XIcon } from "lucide-react";
 
 export default function SidebarFilter() {
   return (
     <aside className="w-72 overflow-hidden px-4 rounded-2xl">
+      <div className="flex-center gap-4 justify-between">
+        <h5>Filter</h5>
+
+        <button
+          className={`text-destructive hidden flexs items-center gap-0.5 border-b border-transparent hover:border-destructive duration-300`}
+        >
+          <XIcon className="size-3" />
+          <small>Clear</small>
+        </button>
+      </div>
+
       <Accordion type="multiple">
-        {/* Filter by Genres */}
-        <AccordionItem value="genre">
-          <AccordionTrigger>Genres</AccordionTrigger>
-          <AccordionContent>
-            <ScrollArea className="flex flex-col h-78 pr-4">
-              {genres.map((item, id) => (
-                <label
-                  key={id}
-                  className="flex-center gap-4 justify-between py-1 px-2 hover:bg-muted has-[:checked]:bg-primary duration-300 cursor-pointer"
-                >
-                  <input type="checkbox" className="peer hidden" />
-                  <span className="">{item}</span>
-                  <CheckIcon className="size-4 scale-0 peer-checked:scale-100 transition-[scale_0.5s_300ms]" />
-                </label>
-              ))}
-
-              <ScrollBar />
-            </ScrollArea>
-          </AccordionContent>
-        </AccordionItem>
-
-        {/* Filter by Price */}
-        <AccordionItem value="price">
-          <AccordionTrigger>Price</AccordionTrigger>
-        </AccordionItem>
-
-        {/* Filter by Rating */}
-        <AccordionItem value="rating">
-          <AccordionTrigger>Rating</AccordionTrigger>
-        </AccordionItem>
+        <FilterByGenre />
+        <FilterByPrice />
+        <FilterByRating />
       </Accordion>
     </aside>
   );
