@@ -21,7 +21,7 @@ export default function BookCard({ book }: Props) {
 
       <div className="absolute top-0 left-0 size-full bg-gradient-to-b from-transparent to-background rounded-3xl p-4 flex flex-col justify-end font-heading">
         <div className="rounded-xl p-4">
-          <Link href={`/store/${book.id}`}>
+          <Link href={`/store/${book.slug}`}>
             <p className="line-clamp-2 hover:underline underline-offset-4 text-center">
               {book.title}
             </p>
