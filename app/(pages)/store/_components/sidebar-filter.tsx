@@ -11,7 +11,7 @@ export default function SidebarFilter() {
         <h5>Filter</h5>
 
         <button
-          className={`text-destructive hidden flexs items-center gap-0.5 border-b border-transparent hover:border-destructive duration-300`}
+          className={`text-destructive hidden flexs items-center gap-0.5 border-b border-transparent hover:border-destructive duration-200`}
         >
           <XIcon className="size-3" />
           <small>Clear</small>

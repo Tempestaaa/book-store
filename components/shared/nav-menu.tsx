@@ -24,7 +24,7 @@ export default function NavMenu() {
         <Link
           key={href}
           href={href}
-          className={`font-heading px-8 py-2 hover:bg-muted duration-300 rounded-full text-sub hover:text-foreground ${
+          className={`font-heading px-8 py-2 hover:bg-muted duration-200 rounded-full text-sub hover:text-foreground ${
             isActive(href) && "!text-foreground bg-muted"
           }`}
         >

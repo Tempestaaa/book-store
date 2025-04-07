@@ -7,6 +7,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 
 export default function NavUser() {
   return (
@@ -25,7 +26,11 @@ export default function NavUser() {
 
         <DropdownMenuSeparator />
 
-        <DropdownMenuItem>Profile</DropdownMenuItem>
+        <DropdownMenuItem>
+          <Link href="/profile" className="w-full">
+            Profile
+          </Link>
+        </DropdownMenuItem>
         <DropdownMenuItem>Notifications</DropdownMenuItem>
         <DropdownMenuItem>Settings</DropdownMenuItem>
       </DropdownMenuContent>

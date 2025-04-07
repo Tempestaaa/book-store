@@ -42,7 +42,7 @@
   --sub: oklch(70.58% 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
-  --star: oklch(0.769 0.188 70.08);
+  --star: oklch(82.8% 0.189 84.429);
 
   --size-h1: 3.815rem;
   --size-h2: 3.052rem;
@@ -126,6 +126,17 @@
   h5,
   h6 {
     @apply font-heading;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  ::-webkit-progress-bar {
+    @apply h-full bg-transparent rounded-full overflow-hidden;
+  }
+  ::-webkit-progress-value {
+    @apply bg-star;
   }
 }
 
