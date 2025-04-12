@@ -6,12 +6,12 @@ import { XIcon } from "lucide-react";
 
 export default function SidebarFilter() {
   return (
-    <aside className="w-72 overflow-hidden px-4 rounded-2xl">
+    <aside className="w-72 overflow-hidden px-4">
       <div className="flex-center gap-4 justify-between">
         <h5>Filter</h5>
 
         <button
-          className={`text-destructive hidden flexs items-center gap-0.5 border-b border-transparent hover:border-destructive duration-200`}
+          className={`text-destructive hidden flexs items-center gap-0.5 border-b border-transparent hover:border-destructive duration-300`}
         >
           <XIcon className="size-3" />
           <small>Clear</small>

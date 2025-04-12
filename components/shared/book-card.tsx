@@ -9,13 +9,13 @@ type Props = {
 
 export default function BookCard({ book }: Props) {
   return (
-    <div className="bg-background ring ring-muted p-4 rounded-3xl relative group hover:ring-foreground duration-200">
+    <div className="bg-background ring ring-muted p-4 rounded-3xl relative group hover:ring-foreground duration-300">
       <div className="max-w-60 h-92 relative flex-center justify-center mx-auto rounded-xl overflow-hidden">
         <Image
           src="/images/test-cover.webp"
           alt="book's cover"
           fill
-          className="group-hover:scale-110 duration-200"
+          className="group-hover:scale-110 duration-300"
         />
       </div>
 

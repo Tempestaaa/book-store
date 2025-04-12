@@ -11,7 +11,7 @@ export default function MoreInformation({ moreInformation }: Props) {
         {moreInformation.map(({ label, value }) => (
           <div
             key={label}
-            className="flex-center py-3 hover:bg-muted duration-200 px-4"
+            className="flex-center py-3 hover:bg-muted duration-300 px-4"
           >
             <span className="flex-1 font-heading">{label}</span>
             <small className="text-sub flex-2">{value}</small>

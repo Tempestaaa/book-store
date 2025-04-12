@@ -12,7 +12,7 @@ export default function RatingRows() {
         {fake_ratings.reverse().map((item, id) => (
           <label
             key={id}
-            className="flex-center gap-4 h-10 hover:bg-muted duration-200 px-6 rounded-full"
+            className="flex-center gap-4 h-10 hover:bg-muted duration-300 px-6 rounded-full"
           >
             <h6 className="mb-2">{5 - id}</h6>
             <progress

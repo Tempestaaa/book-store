@@ -16,7 +16,7 @@ export default function FilterByGenre() {
           {genres.map((item, id) => (
             <label
               key={id}
-              className="flex-center gap-4 justify-between py-1 px-2 hover:bg-muted has-[:checked]:bg-foreground has-[:checked]:text-background duration-200 cursor-pointer"
+              className="flex-center gap-4 justify-between py-1 px-2 hover:bg-muted has-[:checked]:bg-foreground has-[:checked]:text-background duration-300 cursor-pointer"
             >
               <input type="checkbox" className="peer hidden" />
               <span className="">{item}</span>

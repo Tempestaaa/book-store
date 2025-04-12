@@ -57,7 +57,7 @@ export default function BookDesc() {
       {isShowMoreNeeded && (
         <label
           htmlFor="read-more"
-          className="bg-sub text-background hover:bg-background hover:text-foreground duration-200 border-2 cursor-pointer font-heading w-fit mt-1 py-1 px-4 rounded-full peer-checked:hidden"
+          className="bg-sub text-background hover:bg-background hover:text-foreground duration-300 border-2 cursor-pointer font-heading w-fit mt-1 py-1 px-4 rounded-full peer-checked:hidden"
         >
           Read more
         </label>

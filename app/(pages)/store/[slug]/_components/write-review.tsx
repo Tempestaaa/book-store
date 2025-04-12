@@ -8,7 +8,7 @@ export default function WriteReview() {
       <textarea
         rows={6}
         placeholder="Share us some of your thoughts?"
-        className="resize-none focus-visible:outline-0 p-2 rounded-xl border-2 border-muted focus-visible:border-foreground duration-200"
+        className="resize-none focus-visible:outline-0 p-2 rounded-xl border-2 border-muted focus-visible:border-foreground duration-300"
       />
 
       <div className="flex-center gap-4 justify-between">

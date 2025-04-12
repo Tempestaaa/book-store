@@ -26,11 +26,10 @@ export default function NavUser() {
 
         <DropdownMenuSeparator />
 
-        <DropdownMenuItem>
-          <Link href="/profile" className="w-full">
-            Profile
-          </Link>
-        </DropdownMenuItem>
+        <Link href="/settings/profile">
+          <DropdownMenuItem>Profile</DropdownMenuItem>
+        </Link>
+
         <DropdownMenuItem>Notifications</DropdownMenuItem>
         <DropdownMenuItem>Settings</DropdownMenuItem>
       </DropdownMenuContent>
